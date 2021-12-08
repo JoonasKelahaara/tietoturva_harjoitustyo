@@ -20,7 +20,10 @@ function createTable($con){
         passw VARCHAR(64) NOT NULL
     )";
 
+    $sql_add = "INSERT INTO user(fname, lname, uname, passw) VALUES('testi', 'käyttis','testi123', 'testi123')";
+
     $con->exec($sql);
+    $con->exec($sql_add);
 }
 
 function createUser($con, $fname, $lname, $uname, $passwd){
