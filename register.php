@@ -14,4 +14,6 @@ createTable($db);
 
 createUser($db, $fname, $lname, $uname, $passwd);
 
+echo "Rekisteröityminen onnistui";
+
 ?>
