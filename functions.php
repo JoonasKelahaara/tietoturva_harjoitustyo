@@ -2,7 +2,7 @@
 
 function createDbConnection(){
     try{
-        $db = new PDO('mysql:host=localhost;dbname=tietoturvadb', 'root', '');
+        $db = new PDO('mysql:host=localhost;dbname=n0kejo00', 'root', '');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }catch(PDOException $e){
         echo '<br>'.$e->getMessage();
@@ -20,10 +20,7 @@ function createTable($con){
         passw VARCHAR(64) NOT NULL
     )";
 
-    $sql_add = "INSERT INTO user(fname, lname, uname, passw) VALUES('testi', 'käyttis','testi123', 'testi123')";
-
     $con->exec($sql);
-    $con->exec($sql_add);
 }
 
 function createUser($con, $fname, $lname, $uname, $passwd){

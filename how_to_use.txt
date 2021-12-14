@@ -1,0 +1,22 @@
+HOW TO USE/TEST DATA
+
+POST register.php:
+Body
+{
+    "fname": "Testi",
+    "lname": "Ukko",
+    "uname": "testiukko",
+    "passwd": "testi123"
+}
+
+BASIC AUTH login.php
+Username: testiukko
+Password: testi123
+
+POST addinfo.php:
+Body
+{
+    "infotext":"infotekstin testi"
+}
+
+GET checkinfo.php
