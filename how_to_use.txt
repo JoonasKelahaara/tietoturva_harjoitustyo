@@ -1,22 +1,34 @@
 HOW TO USE/TEST DATA
 
-POST register.php:
-Body
-{
-    "fname": "Testi",
-    "lname": "Ukko",
-    "uname": "testiukko",
-    "passwd": "testi123"
-}
+REGISTER:
 
-BASIC AUTH login.php
-Username: testiukko
-Password: testi123
+    POST register.php:
+    Body
+    {
+        "fname": "Testi",
+        "lname": "Ukko",
+        "uname": "testiukko",
+        "passwd": "testi123"
+    }
 
-POST addinfo.php:
-Body
-{
-    "infotext":"infotekstin testi"
-}
+LOG IN:
 
-GET checkinfo.php
+    BASIC AUTH login.php
+    Username: testiukko
+    Password: testi123
+
+POST INFO:
+
+    POST addinfo.php:
+    Body
+    {
+        "infotext":"infotekstin testi"
+    }
+
+CHECK YOUR INFO:
+
+    GET checkinfo.php
+
+LOG OUT:
+
+    GET logout.php
