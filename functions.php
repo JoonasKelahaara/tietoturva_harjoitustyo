@@ -17,7 +17,7 @@ function createTable($con){
         fname VARCHAR(64) NOT NULL,
         lname VARCHAR(64) NOT NULL,
         uname VARCHAR(32) NOT NULL,
-        passw VARCHAR(64) NOT NULL
+        passw VARCHAR(120) NOT NULL
     )";
 
     $con->exec($sql);
