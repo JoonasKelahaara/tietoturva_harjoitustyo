@@ -11,13 +11,13 @@ if(isset($_SESSION["user"])){
     $infotext = filter_var($json->infotext, FILTER_SANITIZE_STRING);
     $user = $_SESSION["user"];
 
-        $sql = "INSERT INTO user_info(uname, infotext) VALUES(?, ?)";
-        $prepared = $db->prepare($sql);
-        $prepared->execute(array($user, $infotext));
+    $sql = "INSERT INTO user_info(uname, infotext) VALUES(?, ?)";
+    $prepared = $db->prepare($sql);
+    $prepared->execute(array($user, $infotext));
 
-        echo "Tietoa lisättiin!";
+    echo "Tietoa lisättiin!";
 
-        exit;
+    exit;
 }
 
 header('HTTP/1.0 401 Unauthorized');
